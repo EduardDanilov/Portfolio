@@ -42,6 +42,16 @@ ul {
     line-height: 125%;
     letter-spacing: 0.5px;
 }
+.article-text-font-smallsize {
+    color: #4d5053;
+    font-family: Jost;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+}
+
 .center {
     max-width: 1200px;
     margin: 0 auto;

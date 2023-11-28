@@ -148,7 +148,7 @@ export default {
     flex-direction: column;
 }
 .article:hover {
-    background: #E7E7E7;
+    background: #F4F0EC;
 }
 .article-background {
     border-radius: 62px 62px 0 0;

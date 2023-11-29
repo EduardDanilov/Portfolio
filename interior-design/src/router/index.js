@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import ErrorView from '../views/ErrorView.vue'
 
 const routes = [
   {
@@ -17,6 +18,14 @@ const routes = [
     name: 'blog',
     component: () => import('../views/BlogView.vue')
   },
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: ErrorView,
+    meta: {
+      hideFooter: true
+    }
+  }
 ]
 
 const router = createRouter({

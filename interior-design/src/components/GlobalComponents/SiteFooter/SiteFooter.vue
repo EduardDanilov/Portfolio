@@ -1,5 +1,5 @@
 <template>
-  <div class="center footer">
+  <div class="center footer" v-if="!$route.meta.hideFooter">
     <div class="footer-left">
       <SiteLogo />
       <p class="footer-text-font">

@@ -42,6 +42,7 @@ export default {
 
 <style scoped>
 .button {
+    width: max-content;
     display: flex;
     align-items: center;
     gap: 9px;

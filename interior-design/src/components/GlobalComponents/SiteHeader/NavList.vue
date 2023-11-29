@@ -23,12 +23,12 @@ export default {
                 {
                     id: 1,
                     name: "Project",
-                    link: "/About",
+                    link: "projects",
                 },
                 {
                     id: 2,
                     name: "Blog",
-                    link: '/'
+                    link: 'blog'
                 },
             ],
         };

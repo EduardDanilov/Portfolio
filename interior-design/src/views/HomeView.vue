@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import MainPageBanner from "@/components/PrivateComponents/MainPageBanner.vue";
-import ArticlesAndNewsSlider from "@/components/PrivateComponents/ArticlesAndNewsSlider.vue";
-import FollowProjects from "@/components/PrivateComponents/FollowProjects.vue";
-import CompanyStatistics from "@/components/PrivateComponents/CompanyStatistics.vue";
+import MainPageBanner from "@/components/PrivateComponents/HomePage/MainPageBanner.vue";
+import ArticlesAndNewsSlider from "@/components/PrivateComponents/HomePage/ArticlesAndNewsSlider.vue";
+import FollowProjects from "@/components/PrivateComponents/HomePage/FollowProjects.vue";
+import CompanyStatistics from "@/components/PrivateComponents/HomePage/CompanyStatistics.vue";
 
 export default {
     name: "HomeView",

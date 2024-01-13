@@ -35,6 +35,11 @@ body {
     cursor: pointer;
     text-decoration: none;
 }
+
+.heading__link:hover {
+    color: rgb(45, 96, 136);
+}
+
 .heading__link:after {
 	content: "";
     display: block;

@@ -29,6 +29,36 @@ body {
     margin-bottom: 18px;
 }
 
+.heading__link {
+	color: #535658;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+.heading__link:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: black; /* Цвет подчеркивания при исчезании линии*/
+    transition: 0.5s; /* Время эффекта */
+}
+
+.heading__link:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; /* Высота линии */
+    background-color: red; /* Цвет подчеркивания при появлении линии*/
+    transition: 0.5s;  /* Время эффекта */
+}
+
 .item__img-block {
     max-width: 100%;
     max-height: 400px;

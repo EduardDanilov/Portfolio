@@ -1,5 +1,5 @@
 <template>
-  <div class="container center">
+  <div class="header-container center">
     <SiteLogo />
     <NavList />
   </div>
@@ -16,11 +16,12 @@ export default {
 };
 </script>
 <style scoped>
-.container {
+.header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 44px;
   margin-bottom: 57px;
+  height: 63px;
 }
 </style>

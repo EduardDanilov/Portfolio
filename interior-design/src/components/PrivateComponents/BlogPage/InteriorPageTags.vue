@@ -42,7 +42,6 @@ export default {
   },
   methods: {
     getTagId(tag) {
-      console.log(tag.id);
       this.articleCode = tag.id;
     },
     handleClick(index) {

@@ -49,7 +49,7 @@ export default {
     justify-content: center;
 }
 .link:hover {
-    padding: 26px 66px;
+    /* padding: 0 65px; */
     border-radius: 18px;
     background: #cda274;
     cursor: pointer;

@@ -2,7 +2,7 @@
     <div class="container center">
         <div class="container-heading">
             <h2 class="heading article-heading-font-bigsize">
-                Articles & News
+                <router-link :to="{path:'articles-news'}">Articles & News</router-link>
             </h2>
             <p class="description article-text-font-bigsize">
                 It is a long established fact that a reader will be distracted
@@ -14,7 +14,7 @@
         <div class="articles-container">
             <div
                 class="article"
-                v-for="(article, index) in articles.slice(0, 3)"
+                v-for="(article, index) in articles.slice(-3)"
                 :key="index"
             >
                 <div
@@ -46,74 +46,16 @@
 
 <script>
 import LinkButton from "@/components/UI/LinkButton.vue";
+import { mapState } from 'vuex';
+
 export default {
     name: "ArticlesAndNewsSlider",
     components: {
         LinkButton,
     },
-
-    data() {
-        return {
-            articles: [
-                {
-                    heading:
-                        "Let’s Get Solution For Building Construction Work",
-                    backImg: require("@/assets/img/kitchen-photo.jpg"),
-                    date: "26 December,2022 ",
-                    description: "Kitchan Design",
-                },
-                {
-                    heading:
-                        "Let’s Get Solution For Building Construction Work",
-                    backImg: require("@/assets/img/kitchen-photo.jpg"),
-                    date: "26 December,2022 ",
-                    description: "Kitchan Design",
-                },
-                {
-                    heading:
-                        "Let’s Get Solution For Building Construction Work",
-                    backImg: require("@/assets/img/kitchen-photo.jpg"),
-                    date: "26 December,2022 ",
-                    description: "Kitchan Design",
-                },
-                {
-                    heading:
-                        "Let’s Get Solution For Building Construction Work",
-                    backImg: require("@/assets/img/kitchen-photo.jpg"),
-                    date: "26 December,2022 ",
-                    description: "Kitchan Design",
-                },
-                {
-                    heading:
-                        "Let’s Get Solution For Building Construction Work",
-                    backImg: require("@/assets/img/kitchen-photo.jpg"),
-                    date: "26 December,2022 ",
-                    description: "Kitchan Design",
-                },
-                {
-                    heading:
-                        "Let’s Get Solution For Building Construction Work",
-                    backImg: require("@/assets/img/kitchen-photo.jpg"),
-                    date: "26 December,2022 ",
-                    description: "Kitchan Design",
-                },
-                {
-                    heading:
-                        "Let’s Get Solution For Building Construction Work",
-                    backImg: require("@/assets/img/kitchen-photo.jpg"),
-                    date: "26 December,2022 ",
-                    description: "Kitchan Design",
-                },
-                {
-                    heading:
-                        "Let’s Get Solution For Building Construction Work",
-                    backImg: require("@/assets/img/kitchen-photo.jpg"),
-                    date: "26 December,2022 ",
-                    description: "Kitchan Design",
-                },
-            ],
-        };
-    },
+    computed: {
+    ...mapState(['articles'])
+  },
 };
 </script>
 
@@ -129,6 +71,8 @@ export default {
 }
 .heading {
     margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
 }
 .description {
     margin-bottom: 52px;
@@ -143,9 +87,11 @@ export default {
     border-radius: 62px;
     border: 1px solid #e7e7e7;
     box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
-
     display: flex;
     flex-direction: column;
+}
+.article:hover {
+    cursor: pointer;
 }
 .article:hover {
     background: #F4F0EC;

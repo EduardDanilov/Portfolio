@@ -6,7 +6,10 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    meta: {
+      breadcrumb: 'Home'
+    }
   },
   {
     path: '/projects',
@@ -17,6 +20,11 @@ const routes = [
     path: '/blog',
     name: 'blog',
     component: () => import('../views/BlogView.vue')
+  },
+  {
+    path: '/articles-news',
+    name: 'articles-news',
+    component: () => import('../views/ArticlesNewsView.vue')
   },
   {
     path: '/:catchAll(.*)',

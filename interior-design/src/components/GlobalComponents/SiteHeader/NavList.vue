@@ -39,22 +39,29 @@ export default {
 ul {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 237px;
     height: 100%;
 }
-.li {
-    display: block;
+a {
+    display: flex;
+    align-items: center;
     height: 100%;
+}
+a:active, a:visited {
+    color: #292f36;
 }
 .li-element {
     color: #292f36;
-    text-align: center;
     font-family: Jost;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 125%;
-    display: block;
+    height: 100%;
+    padding: 0 25px;
+    border-radius: 30px;
+}
+.li-element:hover {
+    transition: 1s;
+    background: #CDA274;
 }
 </style>

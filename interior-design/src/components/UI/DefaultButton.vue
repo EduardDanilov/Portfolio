@@ -67,9 +67,11 @@ export default {
     background: #292f36;
     box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
     cursor: pointer;
+    transition: 1s;
 
     .svg-path {
         stroke: #cda274;
+        transition: 1s;
     }
 }
 </style>

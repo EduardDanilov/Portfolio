@@ -1,9 +1,11 @@
 <template>
     <div class="container center">
         <div class="container-heading">
-            <h2 class="heading article-heading-font-bigsize">
-                Follow Our Projects
-            </h2>
+            <router-link :to="{ path: '/projects' }">
+                <h2 class="heading article-heading-font-bigsize">
+                    Follow Our Projects
+                </h2>
+            </router-link>
             <p class="description article-text-font-bigsize">
                 It is a long established fact that a reader will be distracted
                 by the of readable <br />
@@ -139,6 +141,11 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.project-fnc-content:hover {
+    border-radius: 0 30px 30px 0;
+    background: #cda274;
+    transition: 1.5s;
 }
 .first-img-rounding {
     border-radius: 0 20% 0 0;

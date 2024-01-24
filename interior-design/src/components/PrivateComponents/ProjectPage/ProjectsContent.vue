@@ -11,8 +11,16 @@
                 </div>
                 <div class="project-fnc">
                     <div class="project-fnc-text">
-                        <div class="project-fnc-heading article-text-font-mediumsize">{{ title }}</div>
-                        <div class="project-fnc-category article-text-font-standard">{{ category }}</div>
+                        <div
+                            class="project-fnc-heading article-text-font-mediumsize"
+                        >
+                            {{ title }}
+                        </div>
+                        <div
+                            class="project-fnc-category article-text-font-standard"
+                        >
+                            {{ category }}
+                        </div>
                     </div>
                     <div class="project-nfc-button">
                         <LinkButton />
@@ -110,16 +118,20 @@ export default {
 .container {
     margin-top: 61px;
     margin-bottom: 61px;
-    
+
     display: grid;
-    grid-gap: 30px;
     grid-template-columns: repeat(auto-fill, minmax(585px, 1fr));
+    grid-auto-rows: minmax(100px, max-content);
+    grid-gap: 40px 30px;
     grid-auto-flow: dense;
-    justify-items: center;
-    grid-auto-rows: min-content;
+}
+.project {
+    height: max-content;
+    max-width: 585px;
 }
 .project-image {
     max-width: 585px;
+    margin-bottom: 28px;
 }
 .image {
     width: 100%;

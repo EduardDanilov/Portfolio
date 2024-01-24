@@ -11,6 +11,16 @@
 }
 a {
     text-decoration: none;
+    color: #292F36;;
+}
+a:visited {
+    color: #292F36;;
+}
+a:focus {
+    color: #292F36;;
+}
+a:hover {
+    color: #292F36;;
 }
 ul {
     list-style: none;
@@ -41,6 +51,16 @@ ul {
     font-weight: 400;
     line-height: 125%;
     letter-spacing: 0.5px;
+}
+.article-date-standard {
+    color: #4d5053;
+    font-family: Jost;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.16px;
+    text-transform: capitalize;
 }
 
 .center {

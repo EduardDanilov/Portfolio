@@ -182,6 +182,7 @@ export default {
 .article-background {
     border-radius: 62px 62px 0 0;
     position: relative;
+    background-position: center center;
 }
 .article-description-block {
     position: absolute;

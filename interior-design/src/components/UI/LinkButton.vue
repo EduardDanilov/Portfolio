@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="btn">
         <svg
             width="52"
             height="53"
@@ -37,5 +37,8 @@ export default {
     .svg-circle {
         fill: white;
     }
+}
+.btn:hover {
+    cursor: pointer;
 }
 </style>

@@ -4,44 +4,36 @@ body {
     font-family: "Inter", sans-serif;
 }
 
-.wrapper {
-    padding: 20px 20px 0 20px;
-}
-
 .projects_container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-column-gap: 30px;
     grid-row-gap: 30px;
     justify-items: center;
-
     max-width: 1366px;
     margin: 0 auto;
+    margin-top: 30px;
 }
 
 .projects_item {
-    max-width: 400px;
+    padding-inline: 15px;
 }
 
 .item__heading {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-align: center;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .heading__link {
-	color: #535658;
+    color: #535658;
     position: relative;
     cursor: pointer;
     text-decoration: none;
 }
 
-.heading__link:hover {
-    color: rgb(45, 96, 136);
-}
-
 .heading__link:after {
-	content: "";
+    content: "";
     display: block;
     position: absolute;
     right: 0;
@@ -52,18 +44,6 @@ body {
     transition: 0.5s; /* Время эффекта */
 }
 
-.heading__link:hover:after {
-	content: "";
-    width: 100%;
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    height: 2px; /* Высота линии */
-    background-color: red; /* Цвет подчеркивания при появлении линии*/
-    transition: 0.5s;  /* Время эффекта */
-}
-
 .item__img-block {
     max-width: 100%;
     max-height: 400px;
@@ -71,9 +51,29 @@ body {
 
 .item__img {
     width: 100%;
+    transition: scale 0.4s;
 }
 
-.item__img:hover {
-    scale: 1.1;
-    transition: 0.5s;
+@media (hover: hover) {
+    .heading__link:hover {
+        color: rgb(45, 96, 136);
+    }
+
+    .heading__link:hover:after {
+        content: "";
+        width: 100%;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        height: 2px; /* Высота линии */
+        background-color: red; /* Цвет подчеркивания при появлении линии*/
+        transition: 0.5s; /* Время эффекта */
+    }
+
+    .item__img:hover {
+        scale: 1.1;
+        transition: 0.5s;
+        cursor: pointer;
+    }
 }

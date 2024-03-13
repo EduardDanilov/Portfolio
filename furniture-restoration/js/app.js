@@ -1751,22 +1751,22 @@ PERFORMANCE OF THIS SOFTWARE.
         mousewheel: true
     });
     window.addEventListener("resize", (() => {
-        if (window.innerWidth < 769) {
+        if (window.innerWidth < 769 && window.location.href.includes("masterclass.html")) {
             const redesignContentBlock = document.querySelector(".mc-redesign__content-block");
             const redesignImageBlock = document.querySelector(".mc-redesign__image-block");
             redesignContentBlock.appendChild(redesignImageBlock);
-        } else {
+        } else if (window.innerWidth >= 769 && window.location.href.includes("masterclass.html")) {
             const redesignContent = document.querySelector(".mc-redesign__content");
             const redesignImageBlock = document.querySelector(".mc-redesign__image-block");
             redesignContent.appendChild(redesignImageBlock);
         }
     }));
     window.addEventListener("load", (() => {
-        if (window.innerWidth < 769) {
+        if (window.innerWidth < 769 && window.location.href.includes("masterclass.html")) {
             const redesignContentBlock = document.querySelector(".mc-redesign__content-block");
             const redesignImageBlock = document.querySelector(".mc-redesign__image-block");
             redesignContentBlock.appendChild(redesignImageBlock);
-        } else {
+        } else if (window.innerWidth >= 769 && window.location.href.includes("masterclass.html")) {
             const redesignContent = document.querySelector(".mc-redesign__content");
             const redesignImageBlock = document.querySelector(".mc-redesign__image-block");
             redesignContent.appendChild(redesignImageBlock);

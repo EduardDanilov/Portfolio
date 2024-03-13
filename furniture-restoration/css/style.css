@@ -160,6 +160,11 @@ h6 {
     padding: 0;
   }
 }
+@media (min-width: 48em) {
+  .menu .main-page-link {
+    display: none;
+  }
+}
 
 @media (min-width: 70.625em) {
   .list-menu__item:hover:not(:first-child) {

@@ -54,7 +54,7 @@ body {
     transition: scale 0.4s;
 }
 
-@media (hover: hover) {
+@media (min-width: 769px) {
     .heading__link:hover {
         color: rgb(45, 96, 136);
     }

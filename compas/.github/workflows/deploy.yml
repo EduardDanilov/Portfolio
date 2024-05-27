@@ -1,0 +1,48 @@
+name: Deploy Compas to Portfolio
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: corepack enable
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "20" # Изменение версии до поддерживаемой Nuxt 3
+      - run: npm install
+      - run: npx nuxt build --preset github_pages
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: nuxt-build
+          path: ./.output/public
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: nuxt-build
+          path: dist
+      - name: Setup Git
+        run: |
+          git config --global user.name "Eduard Danilov"
+          git config --global user.email "ed.danilov94@gmail.com"
+      - name: Deploy to Portfolio
+        run: |
+          git clone https://github.com/eduarddanilov/Portfolio.git temp-portfolio
+          cp -r dist/* temp-portfolio/compas
+          cd temp-portfolio
+          git add .
+          git commit -m "Deploy latest changes from Compas"
+          git push https://${{ secrets.DEPLOY_TOKEN }}@github.com/eduarddanilov/Portfolio.git HEAD:main

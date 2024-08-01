@@ -312,9 +312,8 @@
     }
 
     .main {
-        padding-left: 0;
+        padding-left: 50px;
         flex-direction: column;
-        align-items: center;
     }
 
     .main-content {
